@@ -1,6 +1,6 @@
 # $NetBSD$
 
-DISTNAME=	xhash-3.6.2
+DISTNAME=	xhash-3.6.3
 CATEGORIES=	security
 MASTER_SITES=	${MASTER_SITE_GITHUB:=ricardobranco777/}
 GITHUB_TAG=	v${PKGVERSION_NOREV}
@@ -22,4 +22,4 @@ INSTALLATION_DIRS=	bin ${PKGMANDIR}/man1
 post-install:
 	${CHMOD} go+rx ${DESTDIR}${PREFIX}/bin/xhash
 	${CHOWN} ${ROOT_USER} ${DESTDIR}${PREFIX}/bin/xhash
-	${INSTALL_MAN} ${WRKSRC}/xhash.1 ${DESTDIR}${PREFIX}/man/man1/xhash.1
+	${INSTALL_MAN} ${WRKSRC}/xhash.1 ${DESTDIR}${PREFIX}/${PKGMANDIR}/man1/xhash.1
